@@ -17,10 +17,10 @@ void main() {
     };
     
     // Kontrollimi i nivelit me if, if else, else
-    if (niveli == 0) {
-        System.out.println("Rol i panjohur.");
+    if (niveli > 3 || niveli < 1) {
+        IO.println("Rol i panjohur.");
     } else if (niveli == 1) {
-        System.out.println("Mysafir: vetëm lexim, pa fjalëkalim.");
+        IO.println("Mysafir: vetëm lexim, pa fjalëkalim.");
     } else {
         String perdoruesi = IO.readln("Përdoruesi: ").trim().toLowerCase();
         String fjalekalimi = IO.readln("Fjalëkalimi: ");
@@ -34,7 +34,7 @@ void main() {
         }
 
         String mesazhi = llogariaSakte ? "Hyrje e suksesshme." : "Përdorues ose fjalëkalim i gabuar.";
-        System.out.println(mesazhi);
+        IO.println(mesazhi);
         if (llogariaSakte) {
             double hapesira = niveli * 2.5;
             System.out.printf("Hapësira juaj: %.2f GB%n", hapesira);
