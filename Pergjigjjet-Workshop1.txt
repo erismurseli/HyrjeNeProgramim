@@ -1,0 +1,71 @@
+Workshop 1 - Pergjigjet
+Eris Murseli:
+Varianti B:
+
+1. switch-i që jep vlerë
+    a) Në cilin rresht fillon?
+    Fillon ne reshtin 13 ku shkruhet kodi: var niveli = switch(roli){
+
+    b) Çka ruan në variabël për inputin e parë të shembullit tuaj?
+    Tek shembulli i par roli eshte 1(admin). Scitch-i e merr rastin 
+    case 1 -> 3, prandaj variabla niveli ruan vleren 3
+
+    c) Çka ndodh nëse e fshini rreshtin me default? Pse?
+    Programi nuk Kompajllohet sepse Switch-i qe jep vler duhet ti perfshi 
+    te gjitha vlerat e mundshme te variables int dhe case 1, 2, 3 dhe 4 nuk 
+    i mbulojne te gjitha. Pa default Kompajlleri nuk e di çfare vlere ti jap 
+    niveli-t për ato raste.
+
+2. Një kusht me && ose ||
+    a) Në cilin rresht është?
+    Ne rreshtin 21: if (niveli > 3 || niveli < 1). && e kam edhe te rreshtat 36, 38 dhe 40
+    (perdoruesi.equals(...) && fjalekalimi.equals(...)).
+
+    b) Një input ku kushti del true:
+    Roli: 5. Switch-i perdor default dhe niveli bëhet 0. Ateher niveli < 1 është true, pra
+    i gjithe kushti eshte true dhe printohet "Rol i panjohur.".
+
+    c) Një input ku kushti del false:
+    Roli: 1. Niveli është 3, dhe 3 > 3 është false, 3 < 1 është false. Pra kushti është false
+    dhe programi vazhdon te pjesa për përdoruesin dhe fjalëkalimin.
+
+3. Ndryshimi juaj
+    a) Cilat rreshta i shtuat ose i ndryshuat?
+    - Rreshti 8: shtova IO.println("4. operator");
+    - Rreshti 10: pyetja u ndryshua nga "Roli (1-3): " në "Roli (1-4): "
+    - Rreshti 17: shtova case 4 -> 2; te switch-i
+    - Rreshtat 31-50: shtova if (fjalekalimi.length() == 0) me mesazhin "Fjalëkalimi s'mund të jetë bosh." dhe else-in qe e mbyll
+    - Rreshti 36: niveli == 3 e ndryshova në roli == 1
+    - Rreshtat 37-40: shtova else if (roli == 2) për user-in dhe else për operatorin (operator / Op3r!2026)
+
+    b) Pse pikërisht aty?
+    - Rreshtat 8, 10 dhe 17: menuja, pyetja dhe niveli duhet ta kenë rolin e ri.
+    - Rreshti 30: fjalëkalimin bosh e kontrolloj para se ta kontrolloj llogarinë, që të
+      printohet vetëm ai mesazh dhe asgjë tjetër.
+    - Rreshtat 35-40: operatori dhe user-i kanë të dy nivelin 2, prandaj niveli nuk i
+      dallon. Roli i dallon, dhe kështu çdo rol e kontrollon llogarinë e vet.
+
+    c) Një input që e provon ndryshimin, dhe output-i që del:
+
+    Input 1 (operator):
+    1. admin
+    2. user
+    3. guest
+    4. operator
+    Roli (1-4): 4
+    Përdoruesi:  Operator
+    Fjalëkalimi: Op3r!2026
+    Output:
+    Hyrje e suksesshme.
+    Hapësira juaj: 5.00 GB
+
+    Input 2 (fjalëkalim bosh):
+    1. admin
+    2. user
+    3. guest
+    4. operator
+    Roli (1-4): 1
+    Përdoruesi: admin
+    Fjalëkalimi:
+    Output:
+    Fjalëkalimi s'mund të jetë bosh.
